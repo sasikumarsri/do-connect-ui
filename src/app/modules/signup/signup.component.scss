@@ -1,0 +1,53 @@
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 400px;
+        height: 400px;
+        padding: 55px 20px;
+        mat-form-field.mat-form-field {
+            width: 100%;
+        }
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+        margin: 20px 0px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .help-text{ 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        span {
+            margin-top: 25px;
+        }
+    }
+
+    a {
+        width: 100%;
+        margin-top: 10px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: rgb(51, 51, 167);
+    }
+}

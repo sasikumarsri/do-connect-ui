@@ -1,0 +1,26 @@
+
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$deep-purple-palette, 800);
+$my-accent: mat.define-palette(mat.$blue-gray-palette, 200);
+$background-color: map_get(mat.$blue-grey-palette, 50);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ )
+));
+// $background: map_merge($background, (background: $background-color));
+@include mat.all-component-themes($my-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #f3f3f3;}
+
+
+app-root {
+  display: block;
+  height: 100%;
+}

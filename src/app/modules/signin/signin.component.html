@@ -1,0 +1,18 @@
+<div class="signin">
+    <mat-card mat-raised-card class="card">
+        <span class="title">DoConnect</span>
+        <mat-form-field appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input matInput [(ngModel)]="model.userName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [(ngModel)]="model.password">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="signin()">Signin</button>
+        <span class="help-text">
+            <span>don't have an account?<a (click)="signUp()"> Signup</a></span>
+            <a (click)="continueWithoutSignin()">continue without signin</a> 
+        </span>
+    </mat-card>
+</div>

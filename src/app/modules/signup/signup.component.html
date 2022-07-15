@@ -1,0 +1,21 @@
+<div class="signup">
+    <mat-card mat-raised-card class="card">
+        <span class="title">DoConnect</span>
+        <mat-form-field appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input matInput [(ngModel)]="model.userName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [(ngModel)]="model.password">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" [(ngModel)]="model.confirmPassword">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="signUp()">Signup</button>
+        <span class="help-text">
+            <span>alrerady have an account?<a (click)="signin()"> Signin</a></span>
+        </span>
+    </mat-card>
+</div>
