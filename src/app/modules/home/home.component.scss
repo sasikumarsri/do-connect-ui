@@ -1,0 +1,32 @@
+.home {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    .content {
+        margin-top: 20px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 55px 20px;
+    }
+
+    .answer-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
+
+    .answer {
+        margin-top: 10px;
+        width: 80%;
+    }
+      
+    .example-header-image {
+        background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+        background-size: cover;
+    }
+}
