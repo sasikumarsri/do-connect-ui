@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   questionsAndAnswers: any = [
     {
+      commentedAnswer: '',
       question : {
         qus : 'ajbdsdfasdf sfuj sdfjsdbf sfb sfsduf sjfasudf sdfsfbusjfasdfusbf sf sjfbsdjf sdaf sjdf sdfuasdbfsd fsjdbfjskd fsjdbfjsd fasd fjasd fjsdfjsd fjksbadfms dfkjsdbfjs dfesd fjsadbnfmasd fjksabfjs fjsd fsjadbfjsadn fas dfjsdfjsd fasd fjsdnfjms fsd fjasdbfjsd fj fsdfjsdnfjsdbfjasdfsdfjsd fsand f',
         userName: 'Test question',
@@ -48,14 +49,13 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  commentedAnswer = '';
   constructor() { }
 
-  comment(data: any): void {
-    console.log(data, this.commentedAnswer);
-    this.questionsAndAnswers[0].answers.push ({
-      ans: this.commentedAnswer,
-      userName: 'Test answer4 commentedAnswer',
+  comment(data: any, index: number): void {
+    let userName = sessionStorage.getItem('loggedinUser') || ''
+    this.questionsAndAnswers[index].answers.push ({
+      ans: data.commentedAnswer,
+      userName: userName,
       userType: 'USER',
       userProfile: '',
       id: 34

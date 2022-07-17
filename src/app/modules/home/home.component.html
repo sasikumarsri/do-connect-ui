@@ -1,13 +1,6 @@
 <div class="home">
    <div class="content">
-    <!-- <mat-card mat-raised-card class="card">
-        <span>
-            sjfbasm adknad asjd asdnjas mdas dasmdjas das asj dasmd asj dajs dajsd asj dasjd asmdas 
-            dasd as das dasmd as dajs dasmdas das djasdas das damsd sdas,d as,fsaf, ksdfs fsd fks fksf
-            sdfkdfnsdkfskdfskdnfskdfsdfsdfsdfsdf
-        </span>
-    </mat-card> -->
-    <mat-card  mat-raised-card class="card" *ngFor="let item of questionsAndAnswers">
+    <mat-card  mat-raised-card class="card" *ngFor="let item of questionsAndAnswers; let i=index">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>{{item.question.userName}}</mat-card-title>
@@ -20,9 +13,9 @@
           <div class="comment">
             <mat-form-field class="comment-box" appearance="fill">
                 <mat-label>Leave a comment</mat-label>
-                <textarea matInput [(ngModel)]="commentedAnswer"></textarea>
+                <textarea matInput [(ngModel)]="item.commentedAnswer"></textarea>
               </mat-form-field>
-            <button mat-raised-button color="primary" (click)="comment(item.question)">Comment</button>
+            <button mat-raised-button color="primary" (click)="comment(item.question, i)">Comment</button>
           </div>
         </mat-card-content>
             <div class="answer-card">
