@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent } from './menu/menu.component';
 
 
@@ -13,7 +14,8 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     CommonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
   ],
   exports: [
     MenuComponent

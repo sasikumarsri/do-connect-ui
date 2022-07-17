@@ -29,4 +29,21 @@
         background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
         background-size: cover;
     }
+
+    .comment {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        .comment-box {
+            width: 90%;
+            padding-right: 25px;
+        }
+
+        button {
+            height: 40px;
+            width: 90px;
+            margin-top: 30px;
+        }
+    }
 }

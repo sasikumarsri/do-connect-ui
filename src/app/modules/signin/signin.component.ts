@@ -15,7 +15,7 @@ export class SigninComponent implements OnInit {
   }
 
   signin(): void {
-    console.log(this.model)
+    sessionStorage.setItem('loggedinUser', this.model.userName)
     this.router.navigateByUrl('/home')
   }
 

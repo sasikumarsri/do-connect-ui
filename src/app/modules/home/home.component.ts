@@ -46,10 +46,24 @@ export class HomeComponent implements OnInit {
         }
       ]
     }
-  ]
+  ];
+
+  commentedAnswer = '';
   constructor() { }
 
+  comment(data: any): void {
+    console.log(data, this.commentedAnswer);
+    this.questionsAndAnswers[0].answers.push ({
+      ans: this.commentedAnswer,
+      userName: 'Test answer4 commentedAnswer',
+      userType: 'USER',
+      userProfile: '',
+      id: 34
+    })
+  }
+
   ngOnInit(): void {
+    this.questionsAndAnswers.push(this.questionsAndAnswers[0])
   }
 
 }

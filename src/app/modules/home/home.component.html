@@ -17,6 +17,13 @@
           <p>
             {{item.question.qus}}
           </p>
+          <div class="comment">
+            <mat-form-field class="comment-box" appearance="fill">
+                <mat-label>Leave a comment</mat-label>
+                <textarea matInput [(ngModel)]="commentedAnswer"></textarea>
+              </mat-form-field>
+            <button mat-raised-button color="primary" (click)="comment(item.question)">Comment</button>
+          </div>
         </mat-card-content>
             <div class="answer-card">
                 <mat-card *ngFor="let answer of item.answers" class="answer">
@@ -30,7 +37,6 @@
                       </mat-card-content>
                       <mat-card-actions>
                         <button mat-button>LIKE</button>
-                        <button mat-button>SHARE</button>
                       </mat-card-actions>
                 </mat-card>
             </div>
